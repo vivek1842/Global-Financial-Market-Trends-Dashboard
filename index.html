@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Financial & Market Trends Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    
+    <div class="dashboard">
+        <header>
+            <h1>Global Financial & Market Trends Dashboard</h1>
+            <button id="theme-toggle">Toggle Dark Mode</button>
+        </header>
+        
+        <section id="stock-market">
+            <h2>Stock Market Trends</h2>
+            <canvas id="stockChart"></canvas>
+        </section>
+
+        <section id="crypto-trends">
+            <h2>Cryptocurrency Trends</h2>
+            <canvas id="cryptoChart"></canvas>
+        </section>
+
+        <section id="currency-exchange">
+            <h2>Currency Exchange Rates</h2>
+            <p id="currency-info">Select two currencies to compare rates:</p>
+            <select id="currency1"></select>
+            <select id="currency2"></select>
+            <p id="exchange-rate"></p>
+        </section>
+
+        <section id="global-news">
+            <h2>Global Financial News</h2>
+            <div id="news-container">Loading news...</div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
