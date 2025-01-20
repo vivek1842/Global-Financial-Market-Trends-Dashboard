@@ -103,7 +103,7 @@ function displayExchangeRate(data) {
 
 // Load Financial News (NewsAPI)
 async function loadFinancialNews() {
-    const apiKey = 'YOUR_NEWS_API_KEY';
+    const newsApiKey = 'YOUR_NEWS_API_KEY';
     const url = `https://newsapi.org/v2/everything?q=finance&language=en&apiKey=${apiKey}`;
 
     const response = await fetch(url);
