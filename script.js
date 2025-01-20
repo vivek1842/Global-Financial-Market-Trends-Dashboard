@@ -16,9 +16,9 @@ function setupDarkModeToggle() {
 
 // Load Stock Market Data (Alpha Vantage API)
 async function loadStockData() {
-    const apiKey = 'YOUR_ALPHA_VANTAGE_API_KEY';
+    const MarketApiKey = 'YOUR_ALPHA_VANTAGE_API_KEY';
     const symbol = 'AAPL';  // Example: Apple Inc.
-    const url = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${symbol}&interval=5min&apikey=${apiKey}`;
+    const url = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${symbol}&interval=5min&apikey=${MarketApiKey}`;
 
     const response = await fetch(url);
     const data = await response.json();
@@ -70,7 +70,8 @@ async function loadCryptoData() {
 
 // Currency Exchange Rates (ExchangeRate-API)
 async function setupCurrencyExchange() {
-    const url = 'https://v6.exchangerate-api.com/v6/YOUR_API_KEY/latest/USD';
+    let currencyKey = "Key";
+    const url = `https://v6.exchangerate-api.com/v6/${currencyKey}/latest/USD`;
     const response = await fetch(url);
     const data = await response.json();
 
